@@ -1,0 +1,20 @@
+a) Hva er innkapsling? Hvorfor er det nyttig?
+   
+   innkapsling brukes for å få bedre kontroll over variablene i klassene du 
+   lager. Og for å hindre objekter fra andre klasser tilgang til variablene i
+   klassen man har laget uten å gå gjennom objektene i den lagde klassen.
+   Man setter ofte atributtene i disse klassene til private slik at kun
+   klassen har tilgang til disse variablene.
+   
+b) hva er grensesnittet til en klasse? hvordan skiller det seg fra implementasjonen av en klasse?
+
+   summen av operasjonene i klassen kalles klassens grensenitt, Opperasjonene 
+   i klassen beskrives som metoder. Grensesnittet beskriver oppførselen og 
+   tilstanden av objektet Grensesnittet kan ikke kjøres av seg selv
+
+c) hva er en instansemetode og hvordan skiller den seg fra en statisk metode
+   
+   instansemetoder trenger et objekt og skal kun manipulere tilstanden i det
+   enkelte objektet og refererer tilbake til atributtene i dette objektet.
+   Statiske metoder er mest for organisering av kode og du trenger ingen
+   instanse av objektet for å kjøre de statiske metodene. 
