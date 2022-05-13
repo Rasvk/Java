@@ -1,0 +1,41 @@
++-------------------------------+-----------+---------------+--------------------+
+|	Klassenavn		| fil laget | parser ferdig | PrettyPrint ferdig |
++-------------------------------+-----------+---------------+--------------------+
+| - [AspSyntax]			|      *    | 	*     	    |	*		 |
+| - - AspAndTest		|      *    |	*	    |	*		 |
+| - - [AspAtom]			|      *    |	*	    |	*?		 |
+| - - - AspBooleanLiteral	|      *    |	*	    |	*		 |
+| - - - AspDictDisplay		|      *    |	*	    |	*		 |
+| - - - AspFloatLiteral		|      *    |	*	    |	*		 |
+| - - - AspInnerExpr		|      *    |	*	    |	*		 |
+| - - - AspIntegerLiteral	|      *    |	*	    |	*		 |
+| - - - AspListDisplay		|      *    |	*	    |	*		 |
+| - - - AspName			|      *    |   * 	    |	*		 |
+| - - - AspNoneLiteral		|      *    |	*	    |	*		 |
+| - - - AspStringLiteral	|      *    |	*	    |	*		 |
+| - - AspCompOpr		|      *    |	*	    |	*		 |
+| - - AspComparison		|      *    |	*	    |	*		 |
+| - - AspExpr			|      *    |	*	    |	*		 |
+| - - AspFactor			|      *    |	*	    |	*		 |
+| - - AspFactorOpr		|      *    |	*	    |	*		 |
+| - - AspFactorPrefix		|      *    |	*	    |	*		 |
+| - - AspNotTest		|      *    |	*	    |	*		 |
+| - - AspPrimary		|      *    |	*	    |	*		 |
+| - - [AspPrimarySuffix]	|      *    |	*	    |	*?		 |
+| - - - AspArguments		|      *    |	*	    |	*		 |
+| - - - AspSubscription		|      *    |	*	    |	*		 |
+| - - AspProgram		|      *    |	*	    |	*?		 |
+| - - [AspStmt]			|      *    |	*	    |	*?		 |
+| - - - AspAssignment		|      *    |	*	    |	*		 |
+| - - - AspExprStmt		|      *    |	*	    |	*		 |
+| - - - AspForStmt		|      *    |	*	    |	*		 |
+| - - - AspFuncDef		|      *    |	*	    |	*		 |
+| - - - AspIfStmt		|      *    |	*	    |	*		 |
+| - - - AspPassStmt		|      *    |	*	    |	*		 |
+| - - - AspReturnStmt		|      *    |	*	    |	*		 |
+| - - - AspWhileStmt		|      *    |	*	    |	*		 |
+| - - AspSuite			|      *    |	*	    |	*		 |
+| - - AspTerm			|      *    |	*	    |	*		 |
+|- - AspTermOpr			|      *    |	*	    |	*		 |
++-------------------------------+-----------+---------------+--------------------+
+36 klasser
