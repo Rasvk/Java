@@ -1,0 +1,81 @@
+#exercise 1 Define namespaces
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix fam: <http://www.ifi.uio.no/INF3580/family#> .
+@prefix sim: <http://www.ifi.uio.no/INF3580/simpsons#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+#Exercise 2 add Homer, Marge, Lisa, Bart and Maggie as foaf Perosn in RDF file
+sim:Homer rdf:type foaf:Person ;
+          foaf:name "Homer Simpson" ;
+          foaf:age "36"^^xsd:integer .
+
+sim:Marge rdf:type foaf:Person ;
+          foaf:name "Marge Simpson" ;
+          foaf:age "34"^^xsd:int .
+
+sim:Lisa rdf:type foaf:Person ;
+         foaf:name "Lisa Simpson" ;
+         foaf:age "8"^^xsd:integer .
+
+sim:Bart rdf:type foaf:Person ;
+          foaf:name "Bart Simpson" ;
+          foaf:age "10"^^xsd:int .
+
+sim:Maggie rdf:type foaf:Person ;
+          foaf:name "Maggie Simpson" ;
+          foaf:age "1"^^xsd:int .
+
+#Exercise 3
+sim:Simpsons rdf:type fam:Family ;
+             fam:hasFamilyMember sim:Homer ,
+                                 sim:Marge ,
+                                 sim:Bart ,
+                                 sim:Lisa ,
+                                 sim:Maggie .
+
+sim:Homer fam:hasSpouse sim:Marge .
+
+sim:Marge fam:hasSpouse sim:Homer .
+
+sim:Bart fam:hasMother sim:Marge ;
+         fam:hasFather sim:Homer ;
+         fam:hasSister sim:Lisa ;
+         fam:hasSister sim:Maggie .
+
+sim:Lisa fam:hasMother sim:Marge ;
+         fam:hasFather sim:Homer ;
+         fam:hasBrother sim:Bart ;
+         fam:hasSister sim:Maggie .
+
+sim:Maggie fam:hasMother sim:Marge ;
+         fam:hasFather sim:Homer ;
+         fam:hasBrother sim:Bart ;
+         fam:hasSister sim:Lisa .
+
+#Exercise 4
+sim:Abraham rdf:type foaf:Person .
+sim:Mona rdf:type foaf:Person .
+
+sim:Maggie fam:hasParent [fam:hasFather sim:Abraham] . 
+sim:Maggie fam:hasParent [fam:hasMother sim:Mona] .
+
+#Exercise 5
+sim:Patty rdf:type foaf:Person ;
+	  fam:hasSister sim:Selma .
+
+sim:Selma rdf:type foaf:Person ;
+	  fam:hasSister sim:Patty .
+
+sim:Herb rdf:type foaf:Person .
+
+sim:Lisa fam:hasParent [fam:hasSister sim:Selma ;
+                         fam:hasSister sim:Patty ;
+			 fam:hasBrother sim:Herb] .
+
+#Exercise 6
+sim:Marge fam:hasSpouse [fam:hasFather sim:Abraham] .
+
+#rdf:type can be switched with a
+#couldn't get underscore notation working with mrOblig, maybe it doesn't check for that?
+
